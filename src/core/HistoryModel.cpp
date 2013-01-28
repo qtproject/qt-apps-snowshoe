@@ -36,8 +36,9 @@ void HistoryModel::generateRoleNames()
 
 QString HistoryModel::tableCreateQuery() const
 {
-    const QLatin1String historyQuery("CREATE TABLE IF NOT EXISTS history (id INTEGER PRIMARY KEY AUTOINCREMENT,"
-                                     "url VARCHAR, title VARCHAR, visitsCount INTEGER, lastVisit DATE);");
+    const QLatin1String historyQuery(
+        "CREATE TABLE IF NOT EXISTS history (id INTEGER PRIMARY KEY AUTOINCREMENT,"
+        "url VARCHAR, title VARCHAR, visitsCount INTEGER, lastVisit DATE);");
     return historyQuery;
 }
 

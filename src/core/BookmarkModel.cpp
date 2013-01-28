@@ -39,8 +39,9 @@ void BookmarkModel::generateRoleNames()
 
 QString BookmarkModel::tableCreateQuery() const
 {
-    return QStringLiteral("CREATE TABLE IF NOT EXISTS bookmarks (id INTEGER PRIMARY KEY AUTOINCREMENT,"
-                          "name VARCHAR, url VARCHAR, dateAdded DATE, thumbnail BLOB DEFAULT NULL);");
+    return QStringLiteral(
+        "CREATE TABLE IF NOT EXISTS bookmarks (id INTEGER PRIMARY KEY AUTOINCREMENT,"
+        "name VARCHAR, url VARCHAR, dateAdded DATE, thumbnail BLOB DEFAULT NULL);");
 }
 
 void BookmarkModel::setFilter(const QString& filter)
