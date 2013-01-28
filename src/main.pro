@@ -3,6 +3,9 @@ TARGET = ../snowshoe
 
 QT += sql widgets webkit-private quick core-private gui-private quick-private
 
+# Workaround to be able to use QQuickWebViewExperimental::setFlickableViewportEnabled(bool)
+QT += webkitwidgets
+
 LIBS += -Lcore/ -lsnowshoe
 
 PRE_TARGETDEPS += core/libsnowshoe.a
